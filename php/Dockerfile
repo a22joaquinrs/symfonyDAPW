@@ -19,7 +19,7 @@ RUN php -r "if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611
 RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 
-RUN sudo mv composer.phar /usr/local/bin/composer
+RUN mv composer.phar /usr/local/bin/composer
 RUN apt install -y curl git
 RUN curl -sS https://get.symfony.com/cli/installer | bash
 RUN mv /root/.symfony5/bin/symfony /usr/local/bin/symfony
