@@ -18,7 +18,7 @@ services:
       - 8000:8000
     volumes:
       - ./symfony:/app/symfony
-      - ./symfony/.env-dev:/app/.env
+      - ./symfony/.env-prod:/app/.env
       - ./php/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
       - ./php/entrypoint.sh:/sbin/entrypoint.sh
 
