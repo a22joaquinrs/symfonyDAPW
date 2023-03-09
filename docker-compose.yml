@@ -15,8 +15,6 @@ services:
 
   php:
     build: php
-    ports:
-      - 8000:8000
     volumes:
       - ./symfony:/app/symfony
       - ./nginx/.env-dev:/app/symfony/.env
