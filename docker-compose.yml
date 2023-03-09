@@ -14,9 +14,12 @@ services:
 
   php:
     build: php
+    ports:
+      - 8000:8000
     volumes:
       - ./symfony:/app/symfony
       - ./php/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
+      - ./php/entrypoint.sh:/sbin/entrypoint.sh
 
   db:
     image: mysql
