@@ -33,4 +33,4 @@ EXPOSE 9000
 EXPOSE 8000
 
 #CMD ["/usr/sbin/php-fpm8.2", "-F"] 
-CMD ["entrypoint"] 
+CMD ["/sbin/entrypoint.sh"] 
