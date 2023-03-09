@@ -11,7 +11,7 @@ services:
       - ./nginx/www.conf:/etc/php/7.4/fpm/pool.d/www.conf
       - ./nginx/entrypoint.sh:/sbin/entrypoint.sh
       - ./certs:/certs
-      - ./nginx/.env-dev:/app/.env
+      - ./nginx/.env-dev:/app/symfony/.env
 
   php:
     build: php
@@ -19,7 +19,7 @@ services:
       - 8000:8000
     volumes:
       - ./symfony:/app/symfony
-      - ./nginx/.env-dev:/app/.env
+      - ./nginx/.env-dev:/app/symfony/.env
       - ./php/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
       - ./php/entrypoint.sh:/sbin/entrypoint.sh
 
