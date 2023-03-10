@@ -21,16 +21,16 @@ services:
       - ./php/www.conf:/etc/php/8.2/fpm/pool.d/www.conf
       - ./php/entrypoint.sh:/sbin/entrypoint.sh
 
-  db:
-    image: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: abc123.
-      MYSQL_DATABASE: db
-      MYSQL_USER: user
-      MYSQL_PASSWORD: abc123.
-    volumes:
-      - basedatos:/var/lib/mysql
-      - ./db/db.sql:/docker-entrypoint-initdb.d/db.sql
+#  db:
+#    image: mysql
+#    environment:
+#      MYSQL_ROOT_PASSWORD: abc123.
+#      MYSQL_DATABASE: db
+#      MYSQL_USER: user
+#      MYSQL_PASSWORD: abc123.
+#    volumes:
+#      - basedatos:/var/lib/mysql
+#      - ./db/db.sql:/docker-entrypoint-initdb.d/db.sql
 
-volumes:
-  basedatos:
+#volumes:
+#  basedatos:
